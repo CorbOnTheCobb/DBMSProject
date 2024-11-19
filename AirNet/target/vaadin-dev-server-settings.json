@@ -1,0 +1,17 @@
+{
+  "frontendFolder": "/Users/corbantravis/IdeaProjects/AirNet/./src/main/frontend",
+  "themeFolder": "themes",
+  "themeResourceFolder": "/Users/corbantravis/IdeaProjects/AirNet/./src/main/frontend/generated/jar-resources",
+  "staticOutput": "/Users/corbantravis/IdeaProjects/AirNet/target/classes/META-INF/VAADIN/webapp/VAADIN/static",
+  "generatedFolder": "generated",
+  "statsOutput": "/Users/corbantravis/IdeaProjects/AirNet/target/classes/META-INF/VAADIN/config",
+  "frontendBundleOutput": "/Users/corbantravis/IdeaProjects/AirNet/target/classes/META-INF/VAADIN/webapp",
+  "devBundleOutput": "/Users/corbantravis/IdeaProjects/AirNet/target/dev-bundle/webapp",
+  "devBundleStatsOutput": "/Users/corbantravis/IdeaProjects/AirNet/target/dev-bundle/config",
+  "jarResourcesFolder": "/Users/corbantravis/IdeaProjects/AirNet/./src/main/frontend/generated/jar-resources",
+  "themeName": "",
+  "clientServiceWorkerSource": "/Users/corbantravis/IdeaProjects/AirNet/target/sw.ts",
+  "pwaEnabled": false,
+  "offlineEnabled": false,
+  "offlinePath": "'offline.html'"
+}

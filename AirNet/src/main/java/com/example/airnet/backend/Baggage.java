@@ -13,13 +13,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
-public class Aircraft {
+public class Baggage {
 
     @EqualsAndHashCode.Include
     @Id
 
-    private String aircraft_code;
-    private String model;
-    private Integer total_seats;
+    private String confirmation_number;
+    private String baggage_number;
+    private String type;
+    private Integer weight;
 
 }

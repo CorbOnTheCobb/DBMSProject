@@ -8,18 +8,26 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+import java.sql.Time;
+import java.util.Date;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
-public class Aircraft {
+public class Route {
 
     @EqualsAndHashCode.Include
     @Id
 
-    private String aircraft_code;
-    private String model;
-    private Integer total_seats;
+    private String route_id;
+    private String departure_city;
+    private String arrival_city;
+    private Time departure_time;
+    private Time arrival_time;
+    private String gate_number;
+    private String airline;
+    private String terminal;
 
 }

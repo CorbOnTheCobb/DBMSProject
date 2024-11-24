@@ -1,8 +1,8 @@
+// Users.java
 package com.example.airnet.backend;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -13,13 +13,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
-public class Aircraft {
+public class Users {
 
     @EqualsAndHashCode.Include
     @Id
-
-    private String aircraft_code;
-    private String model;
-    private Integer total_seats;
-
+    private String username;
+    private String password;
+    private String email;
+    private String phone;
 }

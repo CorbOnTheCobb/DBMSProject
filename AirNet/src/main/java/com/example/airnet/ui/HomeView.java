@@ -33,7 +33,7 @@ public class HomeView extends VerticalLayout {
 
         Grid<Booking> bookingGrid = new Grid<>(Booking.class);
         bookingGrid.setItems(bookingService.findAll());
-        bookingGrid.setColumns("confirmation_number", "passport_number", "flight_number", "seat_class", "booking_date", "checked_in");
+        bookingGrid.setColumns("confirmation_number", "flight_number", "seat_class", "booking_date", "checked_in");
 
         Grid<Flight> flightGrid = new Grid<>(Flight.class);
         flightGrid.setItems(flightService.findAll());
@@ -66,7 +66,7 @@ public class HomeView extends VerticalLayout {
                     .collect(Collectors.toList()));
             bookingGrid.setItems(bookingService.findAll().stream()
                     .filter(booking -> booking.getConfirmation_number().toLowerCase().contains(filter) ||
-                            booking.getPassport_number().toLowerCase().contains(filter) ||
+                            //booking.getPassport_number().toLowerCase().contains(filter) ||
                             booking.getFlight_number().toLowerCase().contains(filter) ||
                             booking.getSeat_class().toLowerCase().contains(filter) ||
                             booking.getBooking_date().toString().contains(filter) ||
@@ -89,16 +89,6 @@ public class HomeView extends VerticalLayout {
                             route.getAirline().toLowerCase().contains(filter) ||
                             route.getTerminal().toLowerCase().contains(filter))
                     .collect(Collectors.toList()));
-            usersGrid.setItems(usersService.findAll().stream()
-                    .filter(user -> user.getUsername().toLowerCase().contains(filter) ||
-                            user.getEmail().toLowerCase().contains(filter) ||
-                            user.getPhone().toLowerCase().contains(filter))
-                    .collect(Collectors.toList()));
-            passengerGrid.setItems(passengerService.findAll().stream()
-                    .filter(passenger -> passenger.getPassport_number().toLowerCase().contains(filter) ||
-                            passenger.getUser().getUsername().toLowerCase().contains(filter) ||
-                            passenger.getDate_of_birth().toString().contains(filter))
-                    .collect(Collectors.toList()));
         });
 
         add(searchField,
@@ -106,8 +96,6 @@ public class HomeView extends VerticalLayout {
                 new H2("Baggage"), baggageGrid,
                 new H2("Bookings"), bookingGrid,
                 new H2("Flights"), flightGrid,
-                new H2("Routes"), routeGrid,
-                new H2("Users"), usersGrid,
-                new H2("Passengers"), passengerGrid);
+                new H2("Routes"), routeGrid);
     }
 }
